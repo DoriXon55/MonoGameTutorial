@@ -20,38 +20,46 @@ public class TitleScene : Scene
     private Vector2 _slimeTextOrigin;
     private Vector2 _pressEnterPos;
     private Vector2 _pressEnterOrigin;
+    private Texture2D _backgroundPattern;
+    private Rectangle _backgroundDestination;
+    private Vector2 _backgroundOffset;
+    private float _scrollSpeed = 50.0f;
 
 
-public override void Initialize()
-{
-    // LoadContent is called during base.Initialize().
-    base.Initialize();
+    public override void Initialize()
+    {
+        // LoadContent is called during base.Initialize().
+        base.Initialize();
 
-    // While on the title screen, we can enable exit on escape so the player
-    // can close the game by pressing the escape key.
-    Core.ExitOnEscape = true;
+        // While on the title screen, we can enable exit on escape so the player
+        // can close the game by pressing the escape key.
+        Core.ExitOnEscape = true;
 
-    // Set the position and origin for the Dungeon text.
-    Vector2 size = _font5x.MeasureString(DUNGEON_TEXT);
-    _dungeonTextPos = new Vector2(640, 100);
-    _dungeonTextOrigin = size * 0.5f;
+        // Set the position and origin for the Dungeon text.
+        Vector2 size = _font5x.MeasureString(DUNGEON_TEXT);
+        _dungeonTextPos = new Vector2(640, 100);
+        _dungeonTextOrigin = size * 0.5f;
 
-    // Set the position and origin for the Slime text.
-    size = _font5x.MeasureString(SLIME_TEXT);
-    _slimeTextPos = new Vector2(757, 207);
-    _slimeTextOrigin = size * 0.5f;
+        // Set the position and origin for the Slime text.
+        size = _font5x.MeasureString(SLIME_TEXT);
+        _slimeTextPos = new Vector2(757, 207);
+        _slimeTextOrigin = size * 0.5f;
 
-    // Set the position and origin for the press enter text.
-    size = _font.MeasureString(PRESS_ENTER_TEXT);
-    _pressEnterPos = new Vector2(640, 620);
-    _pressEnterOrigin = size * 0.5f;
-}
+        // Set the position and origin for the press enter text.
+        size = _font.MeasureString(PRESS_ENTER_TEXT);
+        _pressEnterPos = new Vector2(640, 620);
+        _pressEnterOrigin = size * 0.5f;
+
+        _backgroundOffset = Vector2.Zero;
+        _backgroundDestination = Core.GraphicsDevice.PresentationParameters.Bounds;
+    }
 
 
     public override void LoadContent()
     {
         _font = Core.Content.Load<SpriteFont>("fonts/04B_30");
         _font5x = Content.Load<SpriteFont>("fonts/04B_30_5x");
+        _backgroundPattern = Content.Load<Texture2D>("images/background-pattern");
     }
 
     public override void Update(GameTime gameTime)
@@ -60,14 +68,25 @@ public override void Initialize()
         {
             Core.ChangeScene(new GameScene());
         }
+
+        float offset = _scrollSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        _backgroundOffset.X -= offset;
+        _backgroundOffset.Y -= offset;
+
+        _backgroundOffset.X %= _backgroundPattern.Width;
+        _backgroundOffset.Y %= _backgroundPattern.Height;
     }
 
 public override void Draw(GameTime gameTime)
 {
     Core.GraphicsDevice.Clear(new Color(32, 40, 78, 255));
 
-    // Begin the sprite batch to prepare for rendering.
-    Core.SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+    Core.SpriteBatch.Begin(samplerState: SamplerState.PointWrap);
+    Core.SpriteBatch.Draw(_backgroundPattern, _backgroundDestination, new Rectangle(_backgroundOffset.ToPoint(), _backgroundDestination.Size), Color.White * 0.5f);
+    Core.SpriteBatch.End();
+
+        // Begin the sprite batch to prepare for rendering.
+        Core.SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
     // The color to use for the drop shadow text.
     Color dropShadowColor = Color.Black * 0.5f;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/fonts/04B_30_5x.spritefont</SourceFile>
-  <SourceTime>2025-08-25T21:10:58.3616083+02:00</SourceTime>
-  <DestFile>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/bin/DesktopGL/Content/fonts/04B_30_5x.xnb</DestFile>
-  <DestTime>2025-08-26T23:33:22.047782+02:00</DestTime>
+  <SourceFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/fonts/04B_30_5x.spritefont</SourceFile>
+  <SourceTime>2025-08-28T22:58:47.2960597+02:00</SourceTime>
+  <DestFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/fonts/04B_30_5x.xnb</DestFile>
+  <DestTime>2025-08-29T00:04:32.5935267+02:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2025-06-02T12:31:02+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

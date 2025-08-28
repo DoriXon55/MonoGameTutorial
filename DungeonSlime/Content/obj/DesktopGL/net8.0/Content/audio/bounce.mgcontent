@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/audio/bounce.wav</SourceFile>
-  <SourceTime>2025-08-20T22:11:09.3272695+02:00</SourceTime>
-  <DestFile>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/bin/DesktopGL/Content/audio/bounce.xnb</DestFile>
-  <DestTime>2025-08-20T22:37:08.995354+02:00</DestTime>
+  <SourceFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/audio/bounce.wav</SourceFile>
+  <SourceTime>2025-08-28T22:58:47.2750469+02:00</SourceTime>
+  <DestFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/audio/bounce.xnb</DestFile>
+  <DestTime>2025-08-29T00:04:31.9451358+02:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2025-06-02T12:31:02+02:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>
