@@ -35,3 +35,10 @@ C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\images\log
 C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\images\atlas.xnb
 C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\images\atlas-definition.xml
 C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\images\tilemap-definition.xml
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\audio\bounce.xnb
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\audio\collect.xnb
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\audio\theme.ogg
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\audio\theme.xnb
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\obj\Debug\net8.0\DungeonSlime.sourcelink.json
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\fonts\04B_30.xnb
+C:\Users\doria\Desktop\MonoGame\DungeonSlime\bin\Debug\net8.0\Content\fonts\04B_30_5x.xnb

@@ -10,3 +10,4 @@ C:\Users\doria\Desktop\MonoGame\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary
 C:\Users\doria\Desktop\MonoGame\MonoGameLibrary\obj\Debug\net8.0\refint\MonoGameLibrary.dll
 C:\Users\doria\Desktop\MonoGame\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.pdb
 C:\Users\doria\Desktop\MonoGame\MonoGameLibrary\obj\Debug\net8.0\ref\MonoGameLibrary.dll
+C:\Users\doria\Desktop\MonoGame\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.sourcelink.json

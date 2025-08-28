@@ -4,10 +4,20 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/audio/bounce.wav</File>
+    <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/audio/collect.wav</File>
+    <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/audio/theme.ogg</File>
+    <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/fonts/04B_30_5x.spritefont</File>
+    <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/fonts/04B_30.spritefont</File>
     <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/images/atlas.png</File>
     <File>C:/Users/doria/Desktop/MonoGame/DungeonSlime/Content/images/logo.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
