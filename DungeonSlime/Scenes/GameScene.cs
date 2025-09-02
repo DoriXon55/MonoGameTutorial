@@ -7,6 +7,12 @@ using MonoGameLibrary;
 using MonoGameLibrary.Graphics;
 using MonoGameLibrary.Input;
 using MonoGameLibrary.Scenes;
+using Gum.DataTypes;
+using Gum.Wireframe;
+using MonoGame;
+using Gum.Forms.Controls;
+using MonoGameGum.GueDeriving;
+using MonoGameGum;
 
 namespace DungeonSlime.Scenes;
 
@@ -55,6 +61,15 @@ public class GameScene : Scene
     // Defines the origin used when drawing the score text.
     private Vector2 _scoreTextOrigin;
 
+    private Panel _pausePanel;
+
+    private Button _resumeButton;
+
+    private SoundEffect _uiSoundEffect;
+
+
+
+
 
     public override void Initialize()
     {
@@ -92,6 +107,8 @@ public class GameScene : Scene
 
         // Assign the initial random velocity to the bat.
         AssignRandomBatVelocity();
+
+        InitializeUI();
     }
 
 
@@ -120,10 +137,93 @@ public class GameScene : Scene
 
         // Load the font.
         _font = Core.Content.Load<SpriteFont>("fonts/04B_30");
+
+        _uiSoundEffect = Core.Content.Load<SoundEffect>("audio/ui");
     }
+
+
+    private void CreatePausePanel()
+    {
+        _pausePanel = new Panel();
+        _pausePanel.Anchor(Anchor.Center);
+        _pausePanel.Visual.WidthUnits = DimensionUnitType.Absolute;
+        _pausePanel.Visual.HeightUnits = DimensionUnitType.Absolute;
+        _pausePanel.Visual.Height = 70;
+        _pausePanel.Visual.Width = 264;
+        _pausePanel.IsVisible = false;
+        _pausePanel.AddToRoot();
+
+        var background = new ColoredRectangleRuntime();
+        background.Dock(Dock.Fill);
+        background.Color = Color.DarkBlue;
+        _pausePanel.AddChild(background);
+
+        var textInstance = new TextRuntime();
+        textInstance.Text = "PAUSED";
+        textInstance.X = 10f;
+        textInstance.Y = 10f;
+        _pausePanel.AddChild(textInstance);
+
+        _resumeButton = new Button();
+        _resumeButton.Text = "RESUME";
+        _resumeButton.Anchor(Anchor.BottomLeft);
+        _resumeButton.Visual.X = 9f;
+        _resumeButton.Visual.Y = -9f;
+        _resumeButton.Visual.Width = 80;
+        _resumeButton.Click += HandleResumeButtonClicked;
+        _pausePanel.AddChild(_resumeButton);
+
+        var quitButton = new Button();
+        quitButton.Text = "QUIT";
+        quitButton.Anchor(Anchor.BottomRight);
+        quitButton.Visual.X = -9f;
+        quitButton.Visual.Y = -9f;
+        quitButton.Width = 80;
+        quitButton.Click += HandleQuitButtonClicked;
+
+        _pausePanel.AddChild(quitButton);
+    }
+
+    private void HandleResumeButtonClicked(object sender, EventArgs e)
+    {
+        // A UI interaction occurred, play the sound effect
+        Core.Audio.PlaySoundEffect(_uiSoundEffect);
+
+        // Make the pause panel invisible to resume the game.
+        _pausePanel.IsVisible = false;
+    }
+
+    private void HandleQuitButtonClicked(object sender, EventArgs e)
+    {
+        // A UI interaction occurred, play the sound effect
+        Core.Audio.PlaySoundEffect(_uiSoundEffect);
+
+        // Go back to the title scene.
+        Core.ChangeScene(new TitleScene());
+    }
+
+    private void InitializeUI()
+    {
+        GumService.Default.Root.Children.Clear();
+
+        CreatePausePanel();
+    }
+
+
+
+
+
+
 
     public override void Update(GameTime gameTime)
     {
+        GumService.Default.Update(gameTime);
+
+        if (_pausePanel.IsVisible)
+        {
+            return;
+        }
+
         // Update the slime animated sprite.
         _slime.Update(gameTime);
 
@@ -259,7 +359,7 @@ public class GameScene : Scene
         // If the escape key is pressed, return to the title screen.
         if (Core.Input.Keyboard.WasKeyJustPressed(Keys.Escape))
         {
-            Core.ChangeScene(new TitleScene());
+            PauseGame();
         }
 
         // If the space key is held down, the movement speed increases by 1.5
@@ -321,6 +421,12 @@ public class GameScene : Scene
 
         // If the A button is held down, the movement speed increases by 1.5
         // and the gamepad vibrates as feedback to the player.
+
+        if (gamePadOne.WasButtonJustPressed(Buttons.Start))
+        {
+            PauseGame();
+        }
+
         float speed = MOVEMENT_SPEED;
         if (gamePadOne.IsButtonDown(Buttons.A))
         {
@@ -368,41 +474,49 @@ public class GameScene : Scene
         }
     }
 
+    private void PauseGame()
+    {
+        _pausePanel.IsVisible = true;
+        _resumeButton.IsFocused = true;
+    }
 
 
-public override void Draw(GameTime gameTime)
-{
-    // Clear the back buffer.
-    Core.GraphicsDevice.Clear(Color.CornflowerBlue);
 
-    // Begin the sprite batch to prepare for rendering.
-    Core.SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+    public override void Draw(GameTime gameTime)
+    {
+        // Clear the back buffer.
+        Core.GraphicsDevice.Clear(Color.CornflowerBlue);
 
-    // Draw the tilemap
-    _tilemap.Draw(Core.SpriteBatch);
+        // Begin the sprite batch to prepare for rendering.
+        Core.SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-    // Draw the slime sprite.
-    _slime.Draw(Core.SpriteBatch, _slimePosition);
+        // Draw the tilemap
+        _tilemap.Draw(Core.SpriteBatch);
 
-    // Draw the bat sprite.
-    _bat.Draw(Core.SpriteBatch, _batPosition);
+        // Draw the slime sprite.
+        _slime.Draw(Core.SpriteBatch, _slimePosition);
 
-    // Draw the score.
-    Core.SpriteBatch.DrawString(
-        _font,              // spriteFont
-        $"Score: {_score}", // text
-        _scoreTextPosition, // position
-        Color.White,        // color
-        0.0f,               // rotation
-        _scoreTextOrigin,   // origin
-        1.0f,               // scale
-        SpriteEffects.None, // effects
-        0.0f                // layerDepth
-    );
+        // Draw the bat sprite.
+        _bat.Draw(Core.SpriteBatch, _batPosition);
 
-    // Always end the sprite batch when finished.
-    Core.SpriteBatch.End();
-}
+        // Draw the score.
+        Core.SpriteBatch.DrawString(
+            _font,              // spriteFont
+            $"Score: {_score}", // text
+            _scoreTextPosition, // position
+            Color.White,        // color
+            0.0f,               // rotation
+            _scoreTextOrigin,   // origin
+            1.0f,               // scale
+            SpriteEffects.None, // effects
+            0.0f                // layerDepth
+        );
+
+        // Always end the sprite batch when finished.
+        Core.SpriteBatch.End();
+
+        GumService.Default.Draw();
+    }
 
 
 

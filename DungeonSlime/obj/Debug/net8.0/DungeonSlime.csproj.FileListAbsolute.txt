@@ -87,3 +87,9 @@ C:\Users\Dorian\MonoGameTutorial\DungeonSlime\obj\Debug\net8.0\DungeonSlime.pdb
 C:\Users\Dorian\MonoGameTutorial\DungeonSlime\obj\Debug\net8.0\DungeonSlime.genruntimeconfig.cache
 C:\Users\Dorian\MonoGameTutorial\DungeonSlime\obj\Debug\net8.0\ref\DungeonSlime.dll
 C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\Content\images\background-pattern.xnb
+C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\Content\audio\ui.xnb
+C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\GumCommon.dll
+C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\FlatRedBall.InterpolationCore.dll
+C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\MonoGameGum.dll
+C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dorian\MonoGameTutorial\DungeonSlime\bin\Debug\net8.0\TextCopy.dll
