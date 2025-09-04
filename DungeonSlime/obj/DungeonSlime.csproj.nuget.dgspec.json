@@ -1,34 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/DungeonSlime.csproj": {}
+    "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\DungeonSlime.csproj": {}
   },
   "projects": {
-    "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/DungeonSlime.csproj": {
+    "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\DungeonSlime.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/DungeonSlime.csproj",
+        "projectUniqueName": "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\DungeonSlime.csproj",
         "projectName": "DungeonSlime",
-        "projectPath": "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/DungeonSlime.csproj",
-        "packagesPath": "/home/dorixon/.nuget/packages/",
-        "outputPath": "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/obj/",
+        "projectPath": "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\DungeonSlime.csproj",
+        "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dorixon/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj": {
-                "projectPath": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj"
+              "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+                "projectPath": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj"
               }
             }
           }
@@ -43,7 +42,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -79,11 +78,15 @@
               "version": "[8.0.19, 8.0.19]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[8.0.19, 8.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[8.0.19, 8.0.19]"
             }
           ],
@@ -92,27 +95,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj": {
+    "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj",
         "projectName": "MonoGameLibrary",
-        "projectPath": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj",
-        "packagesPath": "/home/dorixon/.nuget/packages/",
-        "outputPath": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/obj/",
+        "projectPath": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dorixon/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -131,7 +133,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -162,6 +164,10 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -169,7 +175,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

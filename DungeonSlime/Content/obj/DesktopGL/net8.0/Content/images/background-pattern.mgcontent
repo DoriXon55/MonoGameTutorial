@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/Content/images/background-pattern.png</SourceFile>
-  <SourceTime>2025-09-04T12:02:45.2657567+02:00</SourceTime>
-  <DestFile>/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/images/background-pattern.xnb</DestFile>
-  <DestTime>2025-09-04T12:09:13.1562023+02:00</DestTime>
+  <SourceFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/images/background-pattern.png</SourceFile>
+  <SourceTime>2025-08-28T23:56:40.363923+02:00</SourceTime>
+  <DestFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/images/background-pattern.xnb</DestFile>
+  <DestTime>2025-09-04T20:04:05.5468189+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-06-02T12:31:02+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

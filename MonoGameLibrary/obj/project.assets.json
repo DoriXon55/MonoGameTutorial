@@ -268,25 +268,24 @@
     ]
   },
   "packageFolders": {
-    "/home/dorixon/.nuget/packages/": {}
+    "C:\\Users\\Dorian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj",
       "projectName": "MonoGameLibrary",
-      "projectPath": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj",
-      "packagesPath": "/home/dorixon/.nuget/packages/",
-      "outputPath": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/obj/",
+      "projectPath": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj",
+      "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/dorixon/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -305,7 +304,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -336,6 +335,10 @@
           {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
           }
         ],
         "frameworkReferences": {
@@ -343,7 +346,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

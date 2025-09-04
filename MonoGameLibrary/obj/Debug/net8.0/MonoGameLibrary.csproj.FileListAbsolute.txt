@@ -37,3 +37,16 @@ C:/Users/Dorian/MonoGameTutorial/MonoGameLibrary/obj/Debug/net8.0/ref/MonoGameLi
 /home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/obj/Debug/net8.0/refint/MonoGameLibrary.dll
 /home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/obj/Debug/net8.0/MonoGameLibrary.pdb
 /home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/obj/Debug/net8.0/ref/MonoGameLibrary.dll
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.AssemblyReference.cache
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfoInputs.cache
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfo.cs
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.sourcelink.json
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\refint\MonoGameLibrary.dll
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.deps.json
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\Dorian\MonoGameTutorial\MonoGameLibrary\obj\Debug\net8.0\ref\MonoGameLibrary.dll

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/Content/audio/theme.ogg</SourceFile>
-  <SourceTime>2025-09-04T12:02:45.259465+02:00</SourceTime>
-  <DestFile>/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/audio/theme.xnb</DestFile>
-  <DestTime>2025-09-04T12:09:12.9496768+02:00</DestTime>
+  <SourceFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/audio/theme.ogg</SourceFile>
+  <SourceTime>2025-08-28T22:58:47.2825518+02:00</SourceTime>
+  <DestFile>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/audio/theme.xnb</DestFile>
+  <DestTime>2025-09-04T20:04:04.4496374+02:00</DestTime>
   <Importer>OggImporter</Importer>
   <ImporterTime>2025-06-02T12:31:02+02:00</ImporterTime>
   <Processor>SongProcessor</Processor>
@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/audio/theme.ogg</string>
+    <string>C:/Users/Dorian/MonoGameTutorial/DungeonSlime/Content/bin/DesktopGL/Content/audio/theme.ogg</string>
   </BuildOutput>
 </PipelineBuildEvent>

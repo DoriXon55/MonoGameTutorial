@@ -33,11 +33,11 @@ public class TextureRegion
 
     public float TopTextureCoordinate => SourceRectangle.Top / (float)Texture.Height;
 
-    public float BottomTextureCoordinate => SourceRectangle.Bottom / (float)Texture.Heoght;
+    public float BottomTextureCoordinate => SourceRectangle.Bottom / (float)Texture.Height;
 
-    public float LeftTextureCoordinate => SourceRectangle.Left / (float) Texture.Width;
+    public float LeftTextureCoordinate => SourceRectangle.Left / (float)Texture.Width;
 
-    public float RightTextureCoordinate => SourceRectangle.Right / (float) Texture.Width;
+    public float RightTextureCoordinate => SourceRectangle.Right / (float)Texture.Width;
 
 
     /// <summary>
