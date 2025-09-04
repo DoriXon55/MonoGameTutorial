@@ -14,9 +14,9 @@ public class Game1 : Core
 
     public Game1() : base("Dungeon Slime", 1280, 720, false)
     {
-
+    
     }
-
+    
     private void InitializeGum()
     {
         GumService.Default.Initialize(this, DefaultVisualsVersion.V2);

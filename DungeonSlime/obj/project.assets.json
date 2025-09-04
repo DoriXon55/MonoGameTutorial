@@ -657,32 +657,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dorian\\.nuget\\packages\\": {}
+    "/home/dorixon/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\DungeonSlime.csproj",
+      "projectUniqueName": "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/DungeonSlime.csproj",
       "projectName": "DungeonSlime",
-      "projectPath": "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\DungeonSlime.csproj",
-      "packagesPath": "C:\\Users\\Dorian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dorian\\MonoGameTutorial\\DungeonSlime\\obj\\",
+      "projectPath": "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/DungeonSlime.csproj",
+      "packagesPath": "/home/dorixon/.nuget/packages/",
+      "outputPath": "/home/dorixon/Desktop/MonoGameTutorial/DungeonSlime/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dorian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/dorixon/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj": {
-              "projectPath": "C:\\Users\\Dorian\\MonoGameTutorial\\MonoGameLibrary\\MonoGameLibrary.csproj"
+            "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj": {
+              "projectPath": "/home/dorixon/Desktop/MonoGameTutorial/MonoGameLibrary/MonoGameLibrary.csproj"
             }
           }
         }
@@ -697,7 +698,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -733,15 +734,11 @@
             "version": "[8.0.19, 8.0.19]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
             "version": "[8.0.19, 8.0.19]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[8.0.19, 8.0.19]"
           }
         ],
@@ -750,7 +747,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
