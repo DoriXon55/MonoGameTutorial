@@ -72,10 +72,95 @@ public class Slime
         {
             _nextDirection = potentialNextDirection;
         }
+    }
 
+    private void Move()
+    {
+        SlimeSegment head = _segments[0];
 
+        head.Direction = _nextDirection;
+
+        head.At = head.To;
+
+        head.To = head.At + head.Direction * _stride;
+
+        // Insert the new adjusted value for the head at the front of the segments and
+        // remove the tail segment. This eddectively moves the entire chai forward
+        // without needing to loop throught every segment and update its "at" and "to" positions
+        _segments.Insert(0, head);
+        _segments.RemoveAt(_segments.Count - 1);
+
+        // Iterate throught all of the segments except the head and check
+        // if they are at the same spoition as the head. If they are, then
+        // the head is colliding with a body segment and a body collision
+        // has occured
+        for (int i = 1; i < _segments.Count; i++)
+        {
+            SlimeSegment segment = _segments[i];
+            if (head.At == segment.At)
+            {
+                if (BodyCollision != null)
+                {
+                    BodyCollision.Invoke(this, EventArgs.Empty);
+                }
+                return;
+            }
+        }
     }
 
 
+    public void Grow()
+    {
+        // Capture the value od the tail segment
+        SlimeSegment tail = _segments[_segments.Count - 1];
+
+        // Create a new tail segment that is positioned a grid cell in the
+        // reverse direction from the tail moving to the tail
+        SlimeSegment newTail = new SlimeSegment();
+        newTail.At = tail.To + tail.ReverseDirection * _stride;
+        newTail.To = tail.At;
+        newTail.Direction = Vector2.Normalize(tail.At = newTail.At);
+
+        // Add the new tail segment
+        _segments.Add(newTail);
+    }
+
+    public void Update(GameTime gameTime)
+    {
+        _sprite.Update(gameTime);
+        HandleInput();
+        _movementTimer += gameTime.ElapsedGameTime;
+
+        if (_movementTimer >= s_movementTime)
+        {
+            _movementTimer -= s_movementTime;
+            Move();
+        }
+
+        _movementProgress = (float)(_movementTimer.TotalSeconds / s_movementTime.TotalSeconds);
+    }
+
+    public void Draw()
+    {
+        foreach (SlimeSegment segment in _segments)
+        {
+            Vector2 pos = Vector2.Lerp(segment.At, segment.To, _movementProgress);
+            _sprite.Draw(Core.SpriteBatch, pos);
+        }
+    }
+
+    public Circle GetBounds()
+    {
+        SlimeSegment head = _segments[0];
+
+        Vector2 pos = Vector2.Lerp(head.At, head.To, _movementProgress);
+
+        Circle bounds = new Circle(
+            (int)(pos.X + (_sprite.Width * 0.5f)),
+            (int)(pos.Y + (_sprite.Height * 0.5f)),
+            (int)(_sprite.Width * 0.5f)
+        );
+        return bounds;
+    }
 
 }
