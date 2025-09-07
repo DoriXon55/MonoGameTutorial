@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using MonoGameLibrary;
+using System.Linq;
 using MonoGameLibrary.Graphics;
 
 namespace DungeonSlime.GameObjects;
@@ -15,6 +16,8 @@ public class Slime
     private float _stride;
     private List<SlimeSegment> _segments;
     private AnimatedSprite _sprite;
+    private Queue<Vector2> _inputBuffer;
+    private const int MAX_BUFFER_SIZE = 2;
 
 
     // Event that is raisedif it is detected that the head segment of the slime 
@@ -42,11 +45,14 @@ public class Slime
 
         _nextDirection = head.Direction;
         _movementTimer = TimeSpan.Zero;
+
+        _inputBuffer = new Queue<Vector2>(MAX_BUFFER_SIZE);
     }
 
     private void HandleInput()
     {
-        Vector2 potentialNextDirection = _nextDirection;
+
+        Vector2 potentialNextDirection = Vector2.Zero;
         if (GameController.MoveUp())
         {
             potentialNextDirection = -Vector2.UnitY;
@@ -65,17 +71,20 @@ public class Slime
         }
 
 
-        // Only allow direction change if it is not reversing the current direction
-        // This prevents the slime from backing into itself
-        float dot = Vector2.Dot(potentialNextDirection, _segments[0].Direction);
-        if (dot >= 0)
+        if (potentialNextDirection != Vector2.Zero && _inputBuffer.Count < MAX_BUFFER_SIZE)
         {
-            _nextDirection = potentialNextDirection;
+            Vector2 validateAgainst = _inputBuffer.Count > 0 ? _inputBuffer.Last() : _segments[0].Direction;
         }
+        float dot = Vector2.Dot(potentialNextDirection, validateAgainst);
+        if (dot >= 0) _inputBuffer.Enqueue(potentialNextDirection);
     }
 
     private void Move()
     {
+        if (_inputBuffer.Count > 0) _nextDirection = _inputBuffer.Dequeue();
+
+
+
         SlimeSegment head = _segments[0];
 
         head.Direction = _nextDirection;
